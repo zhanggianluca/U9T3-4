@@ -28,15 +28,22 @@ public class Comedian extends Performer
         callAgent();
     }
 
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("I will make you laugh!");
+    }
+
 
     // Exercise 3: Write your overridden method for perform()
     // so that the output for Exercise 2 test code in Main.java prints
     //      "Performing for an audience! Performance #1"
     // followed by each joke in jokes on a new line
-
-
-
-
+    public void perform() {
+        super.perform();
+        for (String joke: jokes) {
+            System.out.println(joke);
+        }
+    }
 
     // Exercise 4: PREDICT what this will do when
     // the Exercise 3 test code in Main.java is executed
